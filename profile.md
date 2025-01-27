@@ -4,7 +4,7 @@
 
 ### Weekly Session: Monday 14:00
 
-### Team Members
+### Team Members 
 - *Ted Beswick*
 - Alex Beddus
 - Harry Marshall
