@@ -5,7 +5,7 @@
 ### Weekly Session: Monday 14:00
 
 ### Team Members
-- *Ted Seswick*
+- *Ted Beswick*
 - Alex Beddus
 - Harry Marshall
 - Amelia Stuart
