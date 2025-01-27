@@ -10,7 +10,7 @@
     - what we wanted to change
     - gather information about the roles available at the company
 
-### task to complete before next week:
+### Tasks to complete before next week:
 - finalise question list in preparation for client meeting
 - begin looking into Blazor to gain a basic understand
 
