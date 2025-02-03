@@ -15,4 +15,4 @@
 - begin looking into Blazor to gain a basic understand
 
 ### Issues:
-Difficulty beginning work on the planning and design because we hadn't spoken to the client and had limited materials to work with at this stage.
+Difficulty beginning work on the planning and design because we hadn't spoken to the client and had limited materials to work with at this stage
