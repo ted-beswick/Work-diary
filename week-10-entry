@@ -1,0 +1,67 @@
+# Sprint 2
+
+# Day 1
+
+### Tasks completed:
+- Continued working on implementing the second section of the quiz
+- Loading in the correct questions depending on which section the user was in and the correct answers for each question
+- Calculating a score for each possible role based on the users answers
+- Saving the users top 3 roles along with their score for that role in the results table
+- Added images in the background for each of the departments in the second section in response to the clinet's feedback after the first sprint
+
+### Issues:
+We struggled to add the images to the background without it looking tacky, we had to redesign the layout of each page by moving the progress bacr and the container for the questions so that some of the picture was viable but it also couldn't take up too much space on the screen
+We had trouble finding apporiate images for each departmenet that were the correct size, good quality and actually representitive of the given department
+
+# Day 2
+
+### Tasks completed:
+- Used the the users results from section 2 to populate the results page
+- Showed the user's top 3 results, along with a 'compatibility percentage' which showed how compatible they are with that role, calculated using their score out of the max score for that role, we also displayed information about the role and a link the that role on the NEXT careers website
+- Added logic to the results page so that if the user has logged in/created an account without having competed the quiz then it shows skeleton text and encourages them to complete the quiz, but if they have completed the quiz then it shows thier results
+- Begun to desgin the session management
+- If the user hasn't logged in/created an account then they are given a 'session id' but otherwise then the 'user id' is used
+
+### Issues:
+We realised that we would encounter problems with the sesison managemnt, since the client was so clear that the user shouldn't be forced to log in the complete the quiz, we needed to figure out how to store the results effectively while giving the user the option to log in before if they want to, but not requiring them to do so, we spent lots of time on this day trying to figure out the best solution
+
+# Day 3
+
+### Tasks completed:
+- Continued to design the sesison management
+- Figured out a way to solve the problem, we would give every user a session id, which could be used if they weren't logged in, as well as a user id if they were logged in, but if they weren't logged in we would set this value to -1, which represented a null value, we passwed these as parameters between each page so that we new whether the user was logged in
+- Began redisgning all of the pages to accomodate the new session management solution
+- Had to create a boolean parameter to represent whether the user had completed the quiz, so we new where to take the user after logging in/ completeing the quiz
+- Redisnged log in and register pages so that if the user had completed the quiz, it would give them a new userID and assign it to their saved result so they could log in and see their result again, but if they hadn't yet completed the quiz then it would take them to an empty results page and ancourage them to complete the quiz
+- Redesigned the results page so that it also checks if the user is logged in and if they have a result already saved in the results table and loads it on the page
+
+### Issues:
+Encountered more issues with the session management
+The nav buttons would no longer work because they couldn't pass the necessary parameters to the log in and sign up pages
+The Register page was not accurately updating the results table with the new userID so the user couldn't see there results after creating the account
+The way we calculated the users sessionID was ineffective as it would break if 2 users completed the quiz at the same time and it would sometimes not increment
+
+# Day 4 - Note: I missed half of this day due to a having to meet a plumber to fix my boiler
+
+### Tasks completed:
+- Began trying to fix some of the issues we were expirirencing on the previous day
+- Managed to fix the sessionID issues by calculating it using the biggest value in the database rather than the most recent which also fixed some of the issues with creating an account
+- Reworked the Nav buttons so that they were on each page rather than in a layout so that we could assign them an 'onCick' method which would navigate to the correct page with the corret parameters
+- Weren't having much success fixing the main issue with the sessionID so decided to work on teh admin page instead
+- Designed the layout for the admin page
+- Designed the code for the admin page with calulates and displays the most recommended departments, the most recommended roles, the most recommended roles in any selected department and the highest user scores so that recruiters could contact promising candidates
+
+### Issues:
+Spent most of the day trying different approaches to fixing the issues from the previoous day but made no progress which was frustrating
+We tried many different approaches but with no luck, we used breakpoints to ensure that the code was performin as expected which it was but it still wasn't giving the correct result
+
+# Day 5
+
+### Tasks completed:
+- Finally fixed the issue with the sesisonID, which was a result of multiple async operations running simulataneously
+- Fixed the issue and ran tests to ensure that everything was now funcitoning, including completing the quiz and then creating an account, logging out and then back in to check that results were saved correctly
+- performed unit tests to ensure the website was fully functional
+- made the presentation which we would deliver in the client meeting
+
+### Issues:
+We had assigned one of the team members to find some better images for the background but she chose low quality and incorrectly sized images and didn't show up or communicate on the final day so we had to go through the images and find more appopriate ones
